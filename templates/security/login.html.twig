@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title_user_login'|trans }}{% endblock %}
+
+{% block body %}
+<div class="srodek">
+<form method="post" style="width:30%;">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            {{ 'logged_as'|trans }} {{ app.user.email }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+    <h1 class="h3 mb-3 font-weight-normal">Zaloguj się</h1>
+    <label for="inputEmail">Email</label>
+    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+    <label for="inputPassword">Hasło</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"
+    >
+
+    <br>
+    <button class="button" style="padding: .675rem .75rem;" type="submit">
+        Zaloguj się
+    </button>
+    <div class="button">
+        <a href="{{ url('app_forgot_password_request') }}" class="btn btn-primary" style="color:white;">
+            {{ 'action_forgot_password'|trans }}
+        </a>
+    </div>
+
+</form>
+</div>
+{% endblock %}

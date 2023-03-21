@@ -1,0 +1,62 @@
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Tagi' }}
+{% endblock %}
+
+{% block body %}
+    <style>
+        #wrapper{
+            max-width: 70%;
+            margin-top: 4em;
+        }
+
+        .image-wrapper{
+            margin-top: 0em;
+        }
+    </style>
+    <div class="srodek">
+        <h1 class="homeHeader">{{ 'Tagi' }}</h1>
+        {% if pagination is defined and pagination.items|length %}
+
+
+            <div id="panels">
+
+                <div id="wrapper">
+                    <div id="inner">
+
+                        {% for odznaka in pagination.items %}
+                            <div class="image-wrapper">
+                                <p>
+                                    <a href="{{ url('odznaka_edit', {id: odznaka.id}) }}" title="{{ 'action_view'|trans }}">
+                                        <img src="{{ asset( 'img/1.png') }}" alt="Tagi">
+                                    </a>
+                                </p>
+                                <p class="caption">{{ odznaka.title }}</p>
+                            </div>
+
+
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation text-center">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+
+        {% else %}
+            <p>
+                {{ 'message_empty_list'|trans }}
+            </p>
+        {% endif %}
+        <p class="button">
+            <a href="{{ url('home') }}" title="{{ 'action_back_to_list'|trans }}">
+                {{ 'action_back_to_list'|trans }}
+            </a>
+        </p>
+
+    </div>
+{% endblock %}

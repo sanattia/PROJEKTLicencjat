@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Książeczka trusytyczna' }}
+{% endblock %}
+
+{% block body %}
+    <div class="srodek">
+    <h1>{{ 'Książeczka trusytyczna'}}</h1>
+    {% if pagination is defined and pagination.items|length %}
+
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'nazwa trasy', 'trasa.name') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'utworzono', 'wpis.createdAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'punkty', 'trasa.points') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'zdjęcie', 'wpis.imageName') }}</th>
+                <th>{{ 'label_action'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for wpis in pagination.items %}
+                <tr>
+                    <td>{{ wpis.trasa.name }}</td>
+                    <td>{{ wpis.createdAt|format_date('long') }}</td>
+                    <td>{{ wpis.trasa.points }}</td>
+                    {% if wpis.imageName is null %}
+                        <td> <a href="{{ asset( 'uploads/noPic.png' ) }}" data-lightbox="photos"><img class="img-fluid malaIkona" src="{{ asset( 'uploads/noPic.png' ) }}"></a></td>
+
+                    {% else %}
+                        <td> <a href="{{ asset( 'uploads/' ~ wpis.imageName ) }}" data-lightbox="photos"><img class="img-fluid malaIkona" src="{{ asset( 'uploads/' ~ wpis.imageName ) }}"></a></td>
+                    {% endif %}
+
+
+                    <td>
+                        <a class="imgLink" href="{{ url('wpis_show', {id: wpis.id}) }}" title="{{ 'action_view'|trans }}">
+                            <img src="{{ asset( 'img/view.png') }}">
+                        </a>
+
+                        {% if is_granted('EDIT', wpis) %}
+
+                            <a class="imgLink" href="{{ url('wpis_edit', {id: wpis.id}) }}" title="{{ 'action_edit'|trans }}">
+                                <img src="{{ asset( 'img/edit.png') }}">
+                            </a>
+                        {% endif %}
+                        {% if is_granted('DELETE', wpis) %}
+                            <a class="imgLink" href="{{ url('wpis_delete', {id: wpis.id}) }}" title="{{ 'action_delete'|trans }}">
+                                <img src="{{ asset( 'img/delete.png') }}">
+                            </a>
+
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+    {% else %}
+        <p>
+            {{ 'message_empty_list'|trans }}
+        </p>
+    {% endif %}
+
+        <p class="button">
+            <a href="{{ url('wpis_create') }}" title="{{ 'action_create'|trans }}">
+                {{ 'action_create'|trans }}
+            </a>
+        </p>
+
+    <p class="button">
+        <a href="{{ url('home') }}" title="{{ 'action_back_to_list'|trans }}">
+            {{ 'action_back_to_list'|trans }}
+        </a>
+    </p>
+
+        <p class="button">
+            <a href="{{ url('zgloszenie_index') }}" title="{{ 'Zgłoszenie o odznakę' }}">
+                {{ 'Zgłoszenie o odznakę' }}
+            </a>
+        </p>
+    </div>
+{% endblock %}

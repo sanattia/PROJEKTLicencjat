@@ -1,0 +1,12 @@
+{% block subject %}
+    {{ 'email_subject'|trans }}
+{% endblock %}
+{% block html %}
+    <div class="srodek">
+<p>{{ 'to_reset_pass'|trans }}</p>
+
+<a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
+
+<p>{{ 'expire_link'|trans }} {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+    </div>
+{% endblock %}

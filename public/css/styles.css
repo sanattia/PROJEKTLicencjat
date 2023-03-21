@@ -1,0 +1,903 @@
+/* CSS style */
+@font-face {
+    font-family: 'palanquin';
+    src: url('Palanquin/PalanquinDark-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'palanquinBold';
+    src: url('Palanquin/PalanquinDark-Bold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+   /** background: #6c6f7a url('img/background.jpg') no-repeat fixed center top; **/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+#picker {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: baseline;
+    width: 100%;
+    align-items: inherit;
+
+}
+
+#picker .form-control{
+    box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, 0.5);
+    height: 200%;
+}
+
+.zdjecieProfilowe{
+    width:45px;
+    height: 45px;
+}
+
+form img{
+    width:128px;
+    height:128px;
+}
+
+#picker {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+}    #picker select {
+         display: inline-block;
+         cursor: pointer;
+
+         outline: 0;
+         border: 0px solid #000000;
+         border-radius: 20px;
+         background: #1c3140;
+         color: white;
+     }
+
+#picker select:hover,
+#picker select:focus {
+    background: #273743;
+    color: white;
+}
+
+.picker{
+    display: inline;
+    position: relative;
+}
+
+.pickerMain .form-group{
+    margin-bottom: 5rem;
+    margin-left: 1em;
+}
+.pickerMain{
+    position: relative;
+    left: 30%;
+    top: 5%;
+    margin-top: 1em;
+
+}
+
+.picker form{
+    width:90%;
+}
+
+.picker btn{
+    display: inline;
+    max-width: 10%;
+}
+
+#picker label{
+    display: none;
+}
+
+
+.wyborWpisu{
+    max-height: 50%;
+}
+.butonek{
+    position: relative;
+    right: 0;
+    top: 0;
+    float: right !important;
+    display: block;
+}
+
+.butonekMaly{
+    position: absolute;
+    top: -3.4em;
+    right: -4em;
+}
+
+
+#picker .butonek{
+    position: unset;
+}
+
+.butonekMalyDwa{
+    position: absolute;
+    top: -2.5em;
+    right: -23em;
+}
+
+.searchBar{
+    display: inline-block;
+    width:24%;
+}
+
+.searchBar form{
+    display: inline-block;
+    width: 86%;
+    right: -102px;
+    position: relative;
+    left: 27.8%;
+}
+
+.searchBar input{
+    display: inline;
+}
+
+.searchBar .container-fluid{
+    padding-left:0px;
+    padding-right: 0px;
+}
+
+.searchBar label{
+    display:none;
+}
+
+.navBig{
+    position: relative;
+}
+
+.searchButton{
+    display: inline;
+    position: absolute;
+    top: 0.5em;
+}
+
+
+#home{
+    top: 0.5em;
+    position: relative;
+}
+
+/* Informacje użytkownika */
+
+.user-name{
+    color:#b3d4fc;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.logged-info{
+    position: relative;
+    display: block;
+    right: 0;
+    top: 0;
+    padding-top: 0.8%;
+    padding-right:0.8%;
+    text-align: right;
+}
+
+.login-text{
+    text-align: right;
+}
+
+.login-text{
+    display: inline;
+}
+
+.custom-file-input {
+    opacity: 5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+
+.custom-file-label{
+    display: none;
+}
+/* Table */
+
+.imgLink{
+    display: inline-block;
+    padding: 0.4em;
+}
+
+.actionTlo{
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 9px;
+}
+
+
+@media (max-width: 700px) {
+    .table{
+        font-size: 2.5vw;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .imgLink {
+        display: block;
+        padding: 0.2em;
+        margin:0.2em;
+    }
+}
+
+/* Button */
+
+.button {
+    border: none;
+    color: white;
+    padding: 0.8% 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.8%;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    background-color: #198d8e;
+    border-color: #198d8e;
+}
+
+
+.logged-info a {
+    color:#d2d9d7;
+}
+
+.button a{
+    color:white;
+}
+
+/* Menu */
+
+.nav {
+    position: sticky;
+    display: flex;
+    flex-wrap: unset;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.8%;
+    padding-top:0.8%;
+    top: 0;
+    background: #1c3140;
+    color:white;
+    font-family: palanquin;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+
+.navBig{
+    position: sticky;
+    top: 0;
+    background: #1c3140;
+    color:white;
+    font-family: palanquin;
+    z-index: 1;
+}
+
+.nav a {
+    text-decoration: none;
+    color:white;
+}
+
+.navTitle {
+     margin: 0px;
+ }
+
+.navList{
+  margin: 0px;
+}
+.navItem {
+     display: inline-block;
+     margin: 0px 30px;
+ }
+
+
+#picker .form-control{
+    width: 22vw;
+}
+
+
+form{
+    width:40%;
+}
+
+
+/* Header */
+
+.homeHeader {
+    font-family: palanquinBold;
+    font-size: xxx-large;
+}
+
+
+
+/* Kontent stron */
+
+.srodek {
+    width: 90%;
+    margin: 1.3% auto;
+    height: auto;
+    padding: 2%;
+    opacity: 0.8;
+    background-color: rgba(212, 223, 233, 0.8);
+    min-height: 60vh;
+}
+
+.srodekGlowna{
+    margin: 1.3% auto;
+    padding: 2%;
+    height: 75vh;
+    background-color: rgba(212, 223, 233, 0.8);
+    border-radius: 25px;
+}
+
+.box{
+
+    margin:1.3% auto;
+    height:auto;
+    padding:2%;
+    opacity:0.8;
+   /* background-color: #b9c7cb; */
+
+}
+
+
+#kategorie{
+    position: absolute;
+    top:0;
+}
+
+/* Galeria */
+
+.lightbox-gallery {
+    background-repeat: no-repeat;
+    color: #000;
+    overflow-x: hidden
+}
+
+.lightbox-gallery p {
+    color: #fff
+}
+
+.lightbox-gallery h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: #000000;
+    font-family: palanquin;
+}
+
+@media (max-width:767px) {
+    .lightbox-gallery h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px
+    }
+}
+
+.lightbox-gallery .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 40px
+}
+
+.lightbox-gallery .intro p {
+    margin-bottom: 0
+}
+
+.lightbox-gallery .photos {
+    padding-bottom: 20px
+}
+
+.lightbox-gallery .item {
+    padding-bottom: 30px
+}
+
+/* Zdjęcia */
+
+
+.imgLink img{
+    width:40%;
+}
+
+.malaIkona{
+    width: 64px;
+}
+
+.duzaIkona{
+    width: 8em;
+    height: 8em;
+}
+
+.profilIkona{
+    width:20em;
+    margin-bottom: 1em;
+}
+
+
+.szegolyTrasy{
+
+}
+
+/* Profil użytkownika */
+
+.profilText{
+    font-size:calc(1.525rem + 0.4vw);
+
+}
+
+.user-photo{
+    display:inline-block;
+    width:49%;
+    text-align:left;
+}
+
+.user-data{
+
+}
+
+.user-data{
+    display:inline-block;
+    width:50%;
+    float:right;
+    text-align:left;
+}
+
+.opis_strony{
+    padding-top:4%;
+    display:inline-block;
+    width:90%;
+    float:right;
+    text-align:left;
+    padding-bottom: 1%;
+    margin-left:2%;
+
+
+}
+
+@media (max-width: 700px) {
+    .user-photo{
+        display:block;
+        width:100%;
+    }
+
+    .user-data{
+        display:block;
+        width:100%;
+        float:none;
+    }
+
+}
+
+
+/* Kontent zdjecia materiał */
+
+#panels{
+    width:100%;
+    height:100%;
+    position:relative;
+    top:0px;
+    font-family: palanquin;
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:flex;
+    overflow:hidden;
+}
+
+.panelsBoom{
+    background-color: #b08b6e;
+    background-image: url("img/tlo.png");
+    background-color: hsl(31.8, 11.1%, 70%);
+    background-blend-mode: overlay;
+    background-size:cover;
+    background-repeat:no-repeat;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 0.8%;
+    padding-right: 0.8%;
+}
+
+#wrapper {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    min-height: 100%;
+}
+
+#inner {
+    position:relative;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    align-items: stretch;
+
+}
+
+
+.paginacja{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    align-items: stretch;
+    font-weight: bolder;
+    border: 2px solid #C3996B;
+    border-left: 0px;
+    border-right: 0px;
+    width: 100%;
+    height: 3em;
+    padding: 0.8em;
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
+}
+#innerTrasa {
+    position:relative;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    align-items: stretch;
+
+}
+
+.innerTrasapoj{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 26em;
+    margin: 0.8%;
+    padding: 0.4em;
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 9px;
+}
+
+.image-wrapper-trasa{
+    position:relative;
+    display: inline-block;
+    width:30%;
+    top:0;
+}
+
+.trasaDescription{
+    width:50%;
+    text-overflow: ellipsis;
+    display: inline-block;
+    position: relative;
+    float: right;
+    font-size: smaller;
+}
+
+.image-wrapper{
+    margin-top: 4em;
+    position:relative;
+    top:0;
+}
+
+#inner p {
+    background-color: rgba(0, 0, 0, 0.12);
+    padding: 50px;
+    border-radius: 9px;
+}
+
+#inner p.caption {
+    color: #fff;
+    background-color: transparent;
+    border-radius: 0;
+    text-align:center;
+}
+
+#inner img {
+    display: block;
+    border-radius: 8px;
+}
+
+#wrapper{
+    font-family: palanquin;
+}
+
+.arrowDown{
+    position: absolute;
+    bottom: 0px;
+    width: 5.5em;
+    margin: 0 auto;
+    left: 48%;
+}
+
+#banner{
+    width:100%;
+    height:87vh;
+    position:relative;
+    top:0px;
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: hsla(205, 39.1%, 18%, 0.15);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+}
+
+footer{
+    clear:both;
+    width:100%;
+    background-color: #1c3140;
+    position:relative;
+    bottom:0;
+    overflow:hidden;
+}
+
+.footer-distributed{
+    background-color: #1c3140;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    padding: 55px 50px;
+
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-distributed .footer-left{
+    width: 40%;
+}
+
+.footer-distributed h3{
+    color:  #ffffff;
+    margin: 0;
+}
+
+.footer-distributed h2{
+    color:  #ffffff;
+    margin: 0;
+}
+
+.footer-distributed h3 span{
+    color:  #5383d3;
+}
+
+
+.footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+    color:  white;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+.footer-distributed .footer-center{
+    width: 35%;
+}
+
+.footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin:0;
+}
+
+.footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+    color:  white;
+    text-decoration: none;;
+}
+
+.footer-distributed .footer-right{
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  white;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color:  white;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+
+@media (max-width: 880px) {
+
+    .footer-distributed{
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i{
+        margin-left: 0;
+    }
+    .main {
+        line-height: normal;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+
+
+
+
+    form{
+        width:100%;
+    }
+
+    .cke_chrome{
+        width:100%;
+    }
+
+    #picker .form-control{
+        width: 50vw;
+    }
+
+    .nav{
+        display: block;
+    }
+    .navItem{
+        display: block;
+        padding:0.8%;
+    }
+    .searchBar {
+        display: inline-block;
+        width: 61%;
+    }
+
+    .butonekMalyDwa{
+        position: unset;
+    }
+
+    .searchBar form {
+        display: inline;
+        width: 62%;
+        position: relative;
+        left: 12.9%;
+    }
+
+    #banner{
+        padding-bottom:4em;
+        min-height: fit-content;
+        height: 100%;
+    }
+
+    #picker{
+        display: grid;
+
+    }
+
+    .pickerMain{
+        position: relative;
+        left: 0%;
+        top: 0%;
+        margin-top: 1em;
+
+    }
+
+    #banner{
+        color:white;
+    }
+}
+
+
+
+

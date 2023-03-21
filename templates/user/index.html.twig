@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Profil użytkownika' }}
+{% endblock %}
+
+{% block body %}
+    <div class="srodek">
+    <h1>Profil użytkownika {{ app.user.username }}</h1>
+        {% if app.user.avatar is null %}
+            <div class="user-photo">
+                <img class="img-fluid profilIkona" src="{{ asset( 'uploads/noPic.png' ) }}">
+            </div>
+        {% elseif app.user.avatar.imageName is null %}
+            <div class="user-photo">
+                <img class="img-fluid profilIkona" src="{{ asset( 'uploads/noPic.png' ) }}">
+            </div>
+        {% else %}
+            <div class="user-photo">
+                <img class="img-fluid profilIkona" src="{{ asset( 'uploads/' ~ app.user.avatar.imageName ) }}">
+            </div>
+        {% endif %}
+            <div class="user-data">
+                <h2 class="profilText"><div> {{ app.user.email }}</div></h2>
+                <h3 class="profilText"><div> {{ app.user.username }}</div></h3>
+                {% if pagination is defined and pagination.items|length %}
+                {% set sum = 0 %}
+                {% set loopOutput %}
+                {% for wpis in pagination.items %}
+                    {% set sum = sum + wpis.trasa.points %}
+                {% endfor %}
+                {% endset %}
+
+                    <h4 class="profilText"><div>Punkty GOT użytkownika: {{ sum }}</div></h4>
+
+
+                    {{ loopOutput }}
+                {% endif %}
+                <div class="user-odznaki">
+                    {% if app.user.odznaki is defined and app.user.odznaki|length %}
+                        <div class="lightbox-gallery">
+                            <div class="container">
+                                <div class="intro">
+                                    <h2 class="text-center profilText">Zdobyte Odznaki</h2>
+                                </div>
+                                <div class="row photos">
+                        {% for odznaka in app.user.odznaki %}
+
+                            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset( 'img/' ~ odznaka.title ~ '.gif') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset( 'img/' ~ odznaka.title ~ '.gif') }}"></a></div>
+
+                        {% endfor %}
+                            </div>
+                            </div>
+                        </div>
+
+                    {% else %}
+
+                    {% endif %}
+                </div>
+            </div>
+        <div class="button">
+            <a href="{{ url('app_forgot_password_request') }}" class="btn btn-link">
+                {{ 'Zresetuj hasło' }}
+            </a>
+        </div>
+        {% if app.user.avatar is null %}
+        <div class="button">
+            <a href="{{ url('avatar_create') }}" class="btn btn-link">
+                {{ 'Zmien zdjecie profilowe' }}
+            </a>
+        </div>
+        {% else %}
+        <div class="button">
+            <a href="{{ url('avatar_edit', {id: app.user.avatar.id}) }}" class="btn btn-link">
+                {{ 'Zmien zdjecie profilowe' }}
+            </a>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

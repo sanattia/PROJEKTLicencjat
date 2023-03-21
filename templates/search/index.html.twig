@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Katalog tras' }}
+{% endblock %}
+
+{% block body %}
+    <div class="srodek">
+        <h1><a href="{{ url('trasa_index') }}">{{ 'Katalog tras' }}</a></h1>
+        {% if pagination is defined and pagination.items|length %}
+
+            <div class="paginacja">
+                {{ knp_pagination_sortable(pagination, 'nazwa', 'trasa.name') }}
+                {{ knp_pagination_sortable(pagination, 'czas przejścia', 'trasa.czas') }}
+                {{ knp_pagination_sortable(pagination, 'region', 'region.name') }}
+                {{ knp_pagination_sortable(pagination, 'poziom trudności', 'trudnosc.name') }}
+                {{ knp_pagination_sortable(pagination, 'punkty', 'trasa.points') }}
+
+            </div>
+            <div id="panels">
+                <div id="wrapper">
+                    <div id="innerTrasa">
+
+                        {% for trasa in pagination.items %}
+
+                            <div class="innerTrasapoj">
+                                <div class="image-wrapper-trasa"> <a href="{{ asset( 'uploads/noPic.png' ) }}" data-lightbox="photos"><img class="img-fluid duzaIkona" src="{{ asset( 'uploads/noPic.png' ) }}"></a></div>
+                                <div class="trasaDescription">
+                                    <div> {{ trasa.name }} </div>
+                                    <div> czas przejścia: {{ trasa.czas|date('H:i') }} punkty: {{ trasa.points }}</div>
+                                    <div>
+                                        Region: <a href="{{ url('trasa_index', {'filters.region_id' : trasa.region.id}) }}" title="{{ trasa.region.name }}">
+                                            {{ trasa.region.name }}
+                                        </a>
+                                        Trudność: <a href="{{ url('trasa_index', {'filters.trudnosc_id' : trasa.trudnosc.id}) }}" title="{{ trasa.trudnosc.name }}">
+                                            {{ trasa.trudnosc.name }}
+                                        </a>
+                                    </div>
+
+                                    <div>
+                                        Tagi:
+                                        {% if trasa.tags is defined and trasa.tags|length %}
+                                            {% for tag in trasa.tags %}
+                                                <a href="{{ url('trasa_index', {'filters.tag_id' : tag.id}) }}" title="{{ tag.title }}">
+                                                    {{ tag.title }}
+                                                </a>
+                                            {% endfor %}
+                                        {% else %}
+                                            &nbsp;
+                                        {% endif %}
+                                    </div>
+                                    <div>
+                                        <a class="imgLink" href="{{ url('trasa_show', {id: trasa.id}) }}" title="{{ 'Pokaż' }}">
+                                            <img src="{{ asset( 'img/view.png') }}">
+                                        </a>
+                                        {% if is_granted('EDIT', trasa) %}
+
+                                            <a class="imgLink" href="{{ url('trasa_edit', {id: trasa.id}) }}" title="{{ 'Edytuj'}}">
+                                                <img src="{{ asset( 'img/edit.png') }}">
+                                            </a>
+                                        {% endif %}
+                                        {% if is_granted('DELETE', trasa) %}
+                                            <a class="imgLink" href="{{ url('trasa_delete', {id: trasa.id}) }}" title="{{ 'Usuń' }}">
+                                                <img src="{{ asset( 'img/delete.png') }}">
+                                            </a>
+
+                                        {% endif %}
+                                        {% if is_granted('ROLE_USER') %}
+                                            <a class="imgLink" href="{{ url('wpis_create_from', {id: trasa.id}) }}" title="{{ 'Dodaj do książeczki' }}">
+                                                <img src="{{ asset( 'img/create.png') }}">
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        {% endfor %}
+                    </div>
+
+                    <div class="navigation text-center">
+                        {{ knp_pagination_render(pagination) }}
+                    </div>
+                </div>
+            </div>
+
+        {% else %}
+            <p>
+                {{ 'Brak rekordów' }}
+            </p>
+        {% endif %}
+        <p class="button">
+            <a href="{{ url('home') }}" title="{{ 'Powrót' }}">
+                {{ 'Powrót' }}
+            </a>
+        </p>
+    </div>
+{% endblock %}

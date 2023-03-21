@@ -1,0 +1,67 @@
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Trudnosci' }}
+{% endblock %}
+
+{% block body %}
+    <style>
+        #wrapper{
+            max-width: 98%;
+            margin-top: 4em;
+            font-family: palanquin;
+        }
+
+        .image-wrapper{
+            margin-top: 0em;
+        }
+
+        #inner p.caption{
+            color:#C3996B;
+        }
+    </style>
+    <div class="srodek">
+        <h1 class="homeHeader">{{ 'Trudnosci' }}</h1>
+        {% if pagination is defined and pagination.items|length %}
+
+
+            <div id="panels">
+
+                <div id="wrapper">
+                    <div id="inner">
+
+                        {% for trudnosc in pagination.items %}
+                            <div class="image-wrapper">
+                                <p>
+                                    <a href="{{ url('trudnosc_show', {id: trudnosc.id}) }}" title="{{ 'action_view'|trans }}">
+                                        <img src="{{ asset( 'img/1.png') }}" alt="Trudnosci">
+                                    </a>
+                                </p>
+                                <p class="caption">{{ trudnosc.name }}</p>
+                            </div>
+
+
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation text-center">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+
+        {% else %}
+            <p>
+                {{ 'message_empty_list'|trans }}
+            </p>
+        {% endif %}
+        <p class="button">
+            <a href="{{ url('home') }}" title="{{ 'action_back_to_list'|trans }}">
+                {{ 'action_back_to_list'|trans }}
+            </a>
+        </p>
+
+    </div>
+{% endblock %}

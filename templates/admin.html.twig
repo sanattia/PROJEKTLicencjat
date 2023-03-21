@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Książeczka' }}
+{% endblock %}
+
+{% block body %}
+
+    <style>
+
+        button{
+            display:block;
+        }
+    </style>
+    <div class="srodek">
+        <p class="button">
+            <a href="{{ url('user_list') }}" class="btn btn-link">
+                {{ 'Lista użytkowników' }}
+            </a>
+        </p>
+
+        <p class="button">
+            <a href="{{ url('odznaka_index') }}" class="btn btn-link">
+                {{ 'Zarządzaj odznakami' }}
+            </a>
+        </p>
+
+        <p class="button">
+            <a href="{{ url('zgloszenie_admin') }}" class="btn btn-link">
+                {{ 'Zarządzaj zgłoszeniami' }}
+            </a>
+        </p>
+
+        <p class="button">
+            <a href="{{ url('trasa_index') }}" class="btn btn-link">
+                {{ 'Edytuj trasy' }}
+            </a>
+        </p>
+
+        <p class="button">
+            <a href="{{ url('trasa_create') }}" class="btn btn-link">
+                {{ 'Dodaj trasę' }}
+            </a>
+        </p>
+
+        <p class="button">
+            <a href="{{ url('home') }}" class="btn btn-link">
+                {{ 'action_back_to_list'|trans }}
+            </a>
+        </p>
+
+    </div>
+
+{% endblock %}

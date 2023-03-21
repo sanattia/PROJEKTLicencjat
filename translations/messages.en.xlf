@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="message.record_not_found">
+                <source>message.record_not_found</source>
+                <target>Nie znaleziono rekordów</target>
+            </trans-unit>
+            <trans-unit id="label_actions">
+                <source>label_actions</source>
+                <target>Actions</target>
+            </trans-unit>
+            <trans-unit id="label_id">
+                <source>label_id</source>
+                <target>Id</target>
+            </trans-unit>
+            <trans-unit id="label_title">
+                <source>label_title</source>
+                <target>Title</target>
+            </trans-unit>
+            <trans-unit id="label_show">
+                <source>label_show</source>
+                <target>Show</target>
+            </trans-unit>
+            <trans-unit id="label_edit">
+                <source>label_edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="label_delete">
+                <source>label_delete</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="label_category">
+                <source>label_category</source>
+                <target>Category</target>
+            </trans-unit>
+            <trans-unit id="label_name">
+                <source>label_name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="label_content">
+                <source>label_content</source>
+                <target>Content</target>
+            </trans-unit>
+            <trans-unit id="label_tags">
+                <source>label_tags</source>
+                <target>Tags</target>
+            </trans-unit>
+            <trans-unit id="message_empty_list">
+                <source>message_empty_list</source>
+                <target>Empty list.</target>
+            </trans-unit>
+            <trans-unit id="title_record_list">
+                <source>title_record_list</source>
+                <target>Records list</target>
+            </trans-unit>
+            <trans-unit id="action_back_to_list">
+                <source>action_back_to_list</source>
+                <target>Back to list</target>
+            </trans-unit>
+            <trans-unit id="title_book_details">
+                <source>title_book_details</source>
+                <target>Book Details</target>
+            </trans-unit>
+            <trans-unit id="title_book_list">
+                <source>title_book_list</source>
+                <target>Book List</target>
+            </trans-unit>
+            <trans-unit id="message_item_not_found">
+                <source>message_item_not_found</source>
+                <target>Item not found</target>
+            </trans-unit>
+            <trans-unit id="title_category_create">
+                <source>title_category_create</source>
+                <target>Create category</target>
+            </trans-unit>
+            <trans-unit id="action_save">
+                <source>action_save</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="title_category_delete">
+                <source>title_category_delete</source>
+                <target>Delete Category</target>
+            </trans-unit>
+            <trans-unit id="title_category_edit">
+                <source>title_category_edit</source>
+                <target>Edit Category</target>
+            </trans-unit>
+            <trans-unit id="title_category_list">
+                <source>title_category_list</source>
+                <target>List Categories</target>
+            </trans-unit>
+            <trans-unit id="title_book_delete">
+                <source>title_book_delete</source>
+                <target>Delete Book</target>
+            </trans-unit>
+            <trans-unit id="title_book_edit">
+                <source>title_book_edit</source>
+                <target>Edit Book</target>
+            </trans-unit>
+            <trans-unit id="action_view">
+                <source>action_view</source>
+                <target>View</target>
+            </trans-unit>
+            <trans-unit id="action_edit">
+                <source>action_edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="action_delete">
+                <source>action_delete</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="label_created_at">
+                <source>label_created_at</source>
+                <target>Created At</target>
+            </trans-unit>
+            <trans-unit id="label_updated_at">
+                <source>label_updated_at</source>
+                <target>Updated At</target>
+            </trans-unit>
+            <trans-unit id="action_logout">
+                <source>action_logout</source>
+                <target>Log Out</target>
+            </trans-unit>
+            <trans-unit id="action_login">
+                <source>action_login</source>
+                <target>Log In</target>
+            </trans-unit>
+            <trans-unit id="action_add_comment">
+                <source>action_add_comment</source>
+                <target>Add Comment</target>
+            </trans-unit>
+            <trans-unit id="title_book_comment_create">
+                <source>title_book_comment_create</source>
+                <target>Add Book Comment</target>
+            </trans-unit>
+            <trans-unit id="action_back_to_book">
+                <source>action_back_to_book</source>
+                <target>Back To Book Details</target>
+            </trans-unit>
+            <trans-unit id="label_action">
+                <source>label_action</source>
+                <target>Action</target>
+            </trans-unit>
+            <trans-unit id="no_comments">
+                <source>no_comments</source>
+                <target>No Comments Found</target>
+            </trans-unit>
+            <trans-unit id="title_category_details">
+                <source>title_category_details</source>
+                <target>Category Details</target>
+            </trans-unit>
+            <trans-unit id="comment_list">
+                <source>comment_list</source>
+                <target>Comments</target>
+            </trans-unit>
+            <trans-unit id="title_book_create">
+                <source>title_book_create</source>
+                <target>Create Book</target>
+            </trans-unit>
+            <trans-unit id="message_added_successfully">
+                <source>message_added_successfully</source>
+                <target>Added Successfully</target>
+            </trans-unit>
+            <trans-unit id="delete_confirm">
+                <source>delete_confirm</source>
+                <target>Do you really want to delete?</target>
+            </trans-unit>
+            <trans-unit id="action_create">
+                <source>action_create</source>
+                <target>Create New</target>
+            </trans-unit>
+            <trans-unit id="label_none">
+                <source>label_none</source>
+                <target>None</target>
+            </trans-unit>
+            <trans-unit id="title_comment_delete">
+                <source>title_comment_delete</source>
+                <target>Delete Comment</target>
+            </trans-unit>
+            <trans-unit id="main_page">
+                <source>main_page</source>
+                <target>Home Page</target>
+            </trans-unit>
+            <trans-unit id="action_to_books">
+                <source>action_to_books</source>
+                <target>To Book List</target>
+            </trans-unit>
+            <trans-unit id="action_to_category">
+                <source>action_to_category</source>
+                <target>To Category List</target>
+            </trans-unit>
+            <trans-unit id="action_to_user">
+                <source>action_to_user</source>
+                <target>To Profile</target>
+            </trans-unit>
+            <trans-unit id="title_user_index">
+                <source>title_user_index</source>
+                <target>Your Profile</target>
+            </trans-unit>
+            <trans-unit id="book_create">
+                <source>book_create</source>
+                <target>Create Book</target>
+            </trans-unit>
+            <trans-unit id="action_forgot_password">
+                <source>action_forgot_password</source>
+                <target>Reset Password</target>
+            </trans-unit>
+            <trans-unit id="title_user_login">
+                <source>title_user_login</source>
+                <target>Log in!</target>
+            </trans-unit>
+            <trans-unit id="logged_as">
+                <source>logged_as</source>
+                <target>You are logged in as: </target>
+            </trans-unit>
+            <trans-unit id="title_reset_email">
+                <source>title_reset_email</source>
+                <target>Reset Password Email Sent</target>
+            </trans-unit>
+            <trans-unit id="reset_mail_content">
+                <source>reset_mail_content</source>
+                <target>If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.
+This link will expire in: </target>
+            </trans-unit>
+            <trans-unit id="try_again">
+                <source>try_again</source>
+                <target>try again</target>
+            </trans-unit>
+            <trans-unit id="reset_pass_if">
+                <source>reset_pass_if</source>
+                <target>If you don't receive an email please check your spam folder or </target>
+            </trans-unit>
+            <trans-unit id="to_reset_pass">
+                <source>to_reset_pass</source>
+                <target>To reset your password, please visit the following link: </target>
+            </trans-unit>
+            <trans-unit id="expire_link">
+                <source>expire_link</source>
+                <target>This link will expire in: </target>
+            </trans-unit>
+            <trans-unit id="title_reset_pass">
+                <source>title_reset_pass</source>
+                <target>Reset your password </target>
+            </trans-unit>
+            <trans-unit id="enter_email_reset">
+                <source>enter_email_reset</source>
+                <target>Enter your email address and we we will send you a
+link to reset your password. </target>
+            </trans-unit>
+            <trans-unit id="send_email_reset">
+                <source>send_email_reset</source>
+                <target>Send password reset email  </target>
+            </trans-unit>
+            <trans-unit id="title_user_edit">
+                <source>title_user_edit</source>
+                <target>Edit user </target>
+            </trans-unit>
+            <trans-unit id="category_create">
+                <source>category_create</source>
+                <target>Create Category </target>
+            </trans-unit>
+            <trans-unit id="Email">
+                <source>Email</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="user_edit">
+                <source>user_edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="message_updated_successfully">
+                <source>message_updated_successfully</source>
+                <target>Updated Successfully</target>
+            </trans-unit>
+            <trans-unit id="message_deleted_successfully">
+                <source>message_deleted_successfully</source>
+                <target>Deleted Successfully</target>
+            </trans-unit>
+            <trans-unit id="message_created_successfully">
+                <source>message_created_successfully</source>
+                <target>Created Successfully</target>
+            </trans-unit>
+            <trans-unit id="email_subject">
+                <source>email_subject</source>
+                <target>Password Reset Mail</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

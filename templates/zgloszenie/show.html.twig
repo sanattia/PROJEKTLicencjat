@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Szczegóły zgłoszenia' }}
+{% endblock %}
+
+{% block body %}
+    <div class="srodek">
+        <h1>{{ 'title_zgloszenie_details'|trans({'%id%': zgloszenie.id|default('')}) }}</h1>
+        {% if zgloszenie is defined and zgloszenie|length %}
+            <dl class="dl-horizontal">
+                <dt>{{ 'label_id'|trans }}</dt>
+                <dd>{{ zgloszenie.id }}</dd>
+                <dt>{{ 'label_created_at'|trans }}</dt>
+                <dd>{{ zgloszenie.createdAt|format_date('long') }}</dd>
+                <dt>{{ 'label_updated_at'|trans }}</dt>
+                <dd>{{ zgloszenie.updatedAt|format_date('long') }}</dd>
+                <dt>{{ 'odznaka'|trans }}</dt>
+                <dd>{{  zgloszenie.odznaka }}</dd>
+                <dt>{{ 'komentarz'|trans }}</dt>
+                <dd>{{  zgloszenie.komentarz }}</dd>
+            </dl>
+
+        {% else %}
+            <p>
+                {{ 'message_item_not_found'|trans }}
+            </p>
+        {% endif %}
+        <p class="button">
+            <a href="{{ url('zgloszenie_index') }}" title="{{ 'action_back_to_list'|trans }}">
+                {{ 'action_back_to_list'|trans }}
+            </a>
+        </p>
+    </div>
+{% endblock %}

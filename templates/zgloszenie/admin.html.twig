@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Zgłoszenia o odznakę' }}
+{% endblock %}
+
+{% block body %}
+    <div class="srodek">
+        <h1>{{ 'Zgłoszenia o odznakę'}}</h1>
+        {% if pagination is defined and pagination.items|length %}
+
+
+            <div class="navigation text-center">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>{{ knp_pagination_sortable(pagination, 'nazwa odznaki', 'zgloszenie.odznaka') }}</th>
+                    <th>{{ knp_pagination_sortable(pagination, 'utworzono', 'zgloszenie.createdAt') }}</th>
+                    <th>{{ knp_pagination_sortable(pagination, 'komentarz', 'zgloszenie.komentarz') }}</th>
+                    <th>{{ 'autor' }}</th>
+                    <th>{{ 'label_action'|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for zgloszenie in pagination.items %}
+                    <tr>
+                        <td>{{ zgloszenie.odznaka }}</td>
+                        <td>{{ zgloszenie.createdAt|format_date('long') }}</td>
+                        <td>{{ zgloszenie.komentarz }}</td>
+                        <td>{{ zgloszenie.author }}</td>
+                        <td>
+
+                            {% if is_granted('ROLE_ADMIN') %}
+
+                                <a class="imgLink" href="{{ url('zgloszenie_edit', {id: zgloszenie.id}) }}" title="{{ 'action_edit'|trans }}">
+                                    <img src="{{ asset( 'img/edit.png') }}">
+                                </a>
+                            {% endif %}
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <a class="imgLink" href="{{ url('zgloszenie_delete', {id: zgloszenie.id}) }}" title="{{ 'action_delete'|trans }}">
+                                    <img src="{{ asset( 'img/delete.png') }}">
+                                </a>
+
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="navigation text-center">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+
+        {% else %}
+            <p>
+                {{ 'message_empty_list'|trans }}
+            </p>
+        {% endif %}
+
+        <p class="button">
+            <a href="{{ url('zgloszenie_create') }}" title="{{ 'action_create'|trans }}">
+                {{ 'action_create'|trans }}
+            </a>
+        </p>
+
+        <p class="button">
+            <a href="{{ url('admin') }}" title="{{ 'action_back_to_list'|trans }}">
+                {{ 'action_back_to_list'|trans }}
+            </a>
+        </p>
+    </div>
+{% endblock %}

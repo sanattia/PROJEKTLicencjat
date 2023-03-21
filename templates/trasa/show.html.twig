@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+    {{ 'title_trasa_details'|trans({'%id%': trasa.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <style>
+        dl{
+            display: inline-table;
+            padding: 1.8%;
+        }
+
+        .button{
+            display: table;
+        }
+
+           dd img{
+                vertical-align: top;
+            }
+
+    </style>
+    <div class="srodek">
+    <h1>{{ 'Szczegóły trasy ' }}{{  trasa.name }}</h1>
+    {% if trasa is defined and trasa|length %}
+        <dl class="dl-horizontal">
+            <dt></dt>
+            <dd class="szegolyTrasy">
+                {% if trasa.imageName is null %}
+                    <a href="{{ asset( 'uploads/noPic.png' ) }}" data-lightbox="photos"><img class="img-fluid duzaIkona" src="{{ asset( 'uploads/noPic.png' ) }}"></a>
+                {% else %}
+                    <a href="{{ asset( 'uploads/' ~ trasa.imageName ) }}" data-lightbox="photos"><img class="img-fluid duzaIkona" src="{{ asset( 'uploads/' ~ trasa.imageName ) }}"></a>
+                {% endif %}</dd>
+
+
+        </dl>
+        <dl class="dl-horizontal">
+            <dt>{{ 'Nazwa trasy' }}</dt>
+            <dd>{{  trasa.name }}</dd>
+            <dt>{{ 'Region' }}</dt>
+            <dd>{{  trasa.region.name }}</dd>
+        </dl>
+        <dl class="dl-horizontal">
+            <dt>{{ 'Trudność' }}</dt>
+            <dd>{{  trasa.trudnosc.name }}</dd>
+            <dt>{{ 'Punkty' }}</dt>
+            <dd>{{  trasa.points }}</dd>
+
+        </dl>
+
+        <dl class="dl-horizontal">
+
+            <dt>{{ 'Punkt Końcowy' }}</dt>
+            <dd>{{  trasa.punktKoncowy }}</dd>
+            <dt>{{ 'Punkt Startowy' }}</dt>
+            <dd>{{  trasa.punktStartowy }}</dd>
+        </dl>
+        <dl class="dl-horizontal">
+            <dt>{{ 'Czas Przejścia' }}</dt>
+            <dd>{{  trasa.czas|date('H:i') }}</dd>
+            <dt>{{ 'label_tags'|trans }}</dt>
+            <dd>
+
+                {% if trasa.tags is defined and trasa.tags|length %}
+                    {% for tag in trasa.tags %}
+                        {{ tag.title }}
+                    {% endfor %}
+                {% else %}
+                    &nbsp;
+                {% endif %}
+            </dd>
+        </dl>
+
+            {% if is_granted('ROLE_USER') %}
+                <dl class="dl-horizontal">
+                <a class="imgLink" href="{{ url('wpis_create_from', {id: trasa.id}) }}" title="{{ 'Dodaj do książeczki' }}">
+                    <img src="{{ asset( 'img/create.png') }}">
+                </a>
+                </dl>
+            {% endif %}
+
+
+        <div class="wnetrze">
+            {{ trasa.adres | raw }}
+        </div>
+
+    {% else %}
+        <p>
+            {{ 'message_item_not_found'|trans }}
+        </p>
+    {% endif %}
+    <p class="button">
+        <a href="{{ url('trasa_index') }}" title="{{ 'action_back_to_list'|trans }}">
+            {{ 'action_back_to_list'|trans }}
+        </a>
+    </p>
+    </div>
+{% endblock %}

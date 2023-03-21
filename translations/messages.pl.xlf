@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="pl" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="message.record_not_found">
+                <source>message.record_not_found</source>
+                <target>Nie znaleziono rekordów</target>
+            </trans-unit>
+            <trans-unit id="label_actions">
+                <source>label_actions</source>
+                <target>Akcje</target>
+            </trans-unit>
+            <trans-unit id="label_id">
+                <source>label_id</source>
+                <target>Id</target>
+            </trans-unit>
+            <trans-unit id="label_title">
+                <source>label_title</source>
+                <target>Tytuł</target>
+            </trans-unit>
+            <trans-unit id="label_show">
+                <source>label_show</source>
+                <target>Pokaż</target>
+            </trans-unit>
+            <trans-unit id="label_edit">
+                <source>label_edit</source>
+                <target>Edytuj</target>
+            </trans-unit>
+            <trans-unit id="label_delete">
+                <source>label_delete</source>
+                <target>Usuń</target>
+            </trans-unit>
+            <trans-unit id="label_category">
+                <source>label_category</source>
+                <target>Kategorie</target>
+            </trans-unit>
+            <trans-unit id="label_name">
+                <source>label_name</source>
+                <target>Nazwa</target>
+            </trans-unit>
+            <trans-unit id="label_content">
+                <source>label_content</source>
+                <target>Kontent</target>
+            </trans-unit>
+            <trans-unit id="label_tags">
+                <source>label_tags</source>
+                <target>Tagi</target>
+            </trans-unit>
+            <trans-unit id="message_empty_list">
+                <source>message_empty_list</source>
+                <target>Pusta lista.</target>
+            </trans-unit>
+            <trans-unit id="title_record_list">
+                <source>title_record_list</source>
+                <target>Lista Rekordów</target>
+            </trans-unit>
+            <trans-unit id="action_back_to_list">
+                <source>action_back_to_list</source>
+                <target>Powrót</target>
+            </trans-unit>
+            <trans-unit id="title_trasa_details">
+                <source>title_trasa_details</source>
+                <target>Szczegóły Trasy</target>
+            </trans-unit>
+            <trans-unit id="title_trasa_list">
+                <source>title_trasa_list</source>
+                <target>Lista Tras</target>
+            </trans-unit>
+            <trans-unit id="message_item_not_found">
+                <source>message_item_not_found</source>
+                <target>Nie znaleziono</target>
+            </trans-unit>
+            <trans-unit id="title_category_create">
+                <source>title_category_create</source>
+                <target>Stwórz kategorie</target>
+            </trans-unit>
+            <trans-unit id="action_save">
+                <source>action_save</source>
+                <target>Zapisz</target>
+            </trans-unit>
+            <trans-unit id="title_category_delete">
+                <source>title_category_delete</source>
+                <target>Usuń Kategorie</target>
+            </trans-unit>
+            <trans-unit id="title_category_edit">
+                <source>title_category_edit</source>
+                <target>Edytuj Kategorie</target>
+            </trans-unit>
+            <trans-unit id="title_category_list">
+                <source>title_category_list</source>
+                <target>Pokaż Kategorie</target>
+            </trans-unit>
+            <trans-unit id="title_trasa_delete">
+                <source>title_trasa_delete</source>
+                <target>Usuń Trasę</target>
+            </trans-unit>
+            <trans-unit id="title_trasa_edit">
+                <source>title_trasa_edit</source>
+                <target>Edytuj Trasę</target>
+            </trans-unit>
+            <trans-unit id="action_view">
+                <source>action_view</source>
+                <target>Pokaż</target>
+            </trans-unit>
+            <trans-unit id="action_edit">
+                <source>action_edit</source>
+                <target>Edytuj</target>
+            </trans-unit>
+            <trans-unit id="action_delete">
+                <source>action_delete</source>
+                <target>Usuń</target>
+            </trans-unit>
+            <trans-unit id="label_created_at">
+                <source>label_created_at</source>
+                <target>Stworzono</target>
+            </trans-unit>
+            <trans-unit id="label_updated_at">
+                <source>label_updated_at</source>
+                <target>Edytowano</target>
+            </trans-unit>
+            <trans-unit id="action_logout">
+                <source>action_logout</source>
+                <target>Wyloguj</target>
+            </trans-unit>
+            <trans-unit id="action_login">
+                <source>action_login</source>
+                <target>Zaloguj</target>
+            </trans-unit>
+            <trans-unit id="action_add_comment">
+                <source>action_add_comment</source>
+                <target>Dodaj Komentarz</target>
+            </trans-unit>
+            <trans-unit id="title_trasa_comment_create">
+                <source>title_trasa_comment_create</source>
+                <target>Dodaj komentarz do trasy</target>
+            </trans-unit>
+            <trans-unit id="action_back_to_trasa">
+                <source>action_back_to_trasa</source>
+                <target>Powrót do tras</target>
+            </trans-unit>
+            <trans-unit id="label_action">
+                <source>label_action</source>
+                <target>Akcja</target>
+            </trans-unit>
+            <trans-unit id="no_comments">
+                <source>no_comments</source>
+                <target>Brak komentarzy</target>
+            </trans-unit>
+            <trans-unit id="title_category_details">
+                <source>title_category_details</source>
+                <target>Detale kategori</target>
+            </trans-unit>
+            <trans-unit id="comment_list">
+                <source>comment_list</source>
+                <target>Komentarze</target>
+            </trans-unit>
+            <trans-unit id="title_trasa_create">
+                <source>title_trasa_create</source>
+                <target>Stwórz Trasę</target>
+            </trans-unit>
+            <trans-unit id="message_added_successfully">
+                <source>message_added_successfully</source>
+                <target>Dodano z powodzeniem</target>
+            </trans-unit>
+            <trans-unit id="delete_confirm">
+                <source>delete_confirm</source>
+                <target>Czy na pewno usunąć?</target>
+            </trans-unit>
+            <trans-unit id="action_create">
+                <source>action_create</source>
+                <target>Swtórz nową</target>
+            </trans-unit>
+            <trans-unit id="label_none">
+                <source>label_none</source>
+                <target>Brak</target>
+            </trans-unit>
+            <trans-unit id="title_comment_delete">
+                <source>title_comment_delete</source>
+                <target>Usuń Komentarz</target>
+            </trans-unit>
+            <trans-unit id="main_page">
+                <source>main_page</source>
+                <target>Strona Główna</target>
+            </trans-unit>
+            <trans-unit id="action_to_trasas">
+                <source>action_to_trasas</source>
+                <target>Do listy tras</target>
+            </trans-unit>
+            <trans-unit id="action_to_category">
+                <source>action_to_category</source>
+                <target>Do listy kategorii</target>
+            </trans-unit>
+            <trans-unit id="action_to_user">
+                <source>action_to_user</source>
+                <target>Do profilu</target>
+            </trans-unit>
+            <trans-unit id="title_user_index">
+                <source>title_user_index</source>
+                <target>Twój profil</target>
+            </trans-unit>
+            <trans-unit id="trasa_create">
+                <source>trasa_create</source>
+                <target>Stwórz Trasę</target>
+            </trans-unit>
+            <trans-unit id="action_forgot_password">
+                <source>action_forgot_password</source>
+                <target>Przypomnij hasło</target>
+            </trans-unit>
+            <trans-unit id="title_user_login">
+                <source>title_user_login</source>
+                <target>Zaloguj!</target>
+            </trans-unit>
+            <trans-unit id="logged_as">
+                <source>logged_as</source>
+                <target>Jesteś zalogowany jako: </target>
+            </trans-unit>
+            <trans-unit id="title_reset_email">
+                <source>title_reset_email</source>
+                <target>Wysłano mail do zresetowania hasła</target>
+            </trans-unit>
+            <trans-unit id="reset_mail_content">
+                <source>reset_mail_content</source>
+                <target>Jeśli konto istnieje, został wysłany email z linkiem do zresetowania hasła.
+Ten link wygaśnie w: </target>
+            </trans-unit>
+            <trans-unit id="try_again">
+                <source>try_again</source>
+                <target>spróbować znów</target>
+            </trans-unit>
+            <trans-unit id="reset_pass_if">
+                <source>reset_pass_if</source>
+                <target>Jeśli nie otrzymasz maila, sprawdź folder spamu lub możesz </target>
+            </trans-unit>
+            <trans-unit id="to_reset_pass">
+                <source>to_reset_pass</source>
+                <target>Aby zresetować hasło, kliknij w ten link: </target>
+            </trans-unit>
+            <trans-unit id="expire_link">
+                <source>expire_link</source>
+                <target>Link wygaśnie w: </target>
+            </trans-unit>
+            <trans-unit id="title_reset_pass">
+                <source>title_reset_pass</source>
+                <target>Zresetuj hasło </target>
+            </trans-unit>
+            <trans-unit id="enter_email_reset">
+                <source>enter_email_reset</source>
+                <target>Wpisz mail do zresetowania hasła </target>
+            </trans-unit>
+            <trans-unit id="send_email_reset">
+                <source>send_email_reset</source>
+                <target>Wyślij mail </target>
+            </trans-unit>
+            <trans-unit id="title_user_edit">
+                <source>title_user_edit</source>
+                <target>Edytuj użytkownika </target>
+            </trans-unit>
+            <trans-unit id="user_edit">
+                <source>user_edit</source>
+                <target>Edytuj</target>
+            </trans-unit>
+            <trans-unit id="category_create">
+                <source>category_create</source>
+                <target>Stwórz kategorię </target>
+            </trans-unit>
+            <trans-unit id="Email">
+                <source>Email</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="message_updated_successfully">
+                <source>message_updated_successfully</source>
+                <target>Zaktualizowano </target>
+            </trans-unit>
+            <trans-unit id="message_deleted_successfully">
+                <source>message_deleted_successfully</source>
+                <target>Usunięto</target>
+            </trans-unit>
+            <trans-unit id="message_created_successfully">
+                <source>message_created_successfully</source>
+                <target>Stworzono</target>
+            </trans-unit>
+            <trans-unit id="email_subject">
+                <source>email_subject</source>
+                <target>Mail Do Resetu Hasła</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

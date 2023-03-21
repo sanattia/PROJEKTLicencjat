@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Szczegóły wpisu'}}
+{% endblock %}
+
+{% block body %}
+    <div class="srodek">
+    <h1>{{ 'Szczegóły wpisu'}}</h1>
+    {% if wpis is defined and wpis|length %}
+        <dl class="dl-horizontal">
+            <dt>{{ 'label_created_at'|trans }}</dt>
+            <dd>{{ wpis.createdAt|format_date('long') }}</dd>
+            <dt>{{ 'label_updated_at'|trans }}</dt>
+            <dd>{{ wpis.updatedAt|format_date('long') }}</dd>
+            <dt>{{ 'Zdjęcie z trasy'|trans }}</dt>
+            {% if wpis.imageName is null %}
+                <dd> <a href="{{ asset( 'uploads/noPic.png' ) }}" data-lightbox="photos"><img class="img-fluid malaIkona" src="{{ asset( 'uploads/noPic.png' ) }}"></a></dd>
+
+            {% else %}
+                <dd> <a href="{{ asset( 'uploads/' ~ wpis.imageName ) }}" data-lightbox="photos"><img class="img-fluid malaIkona" src="{{ asset( 'uploads/' ~ wpis.imageName ) }}"></a></dd>
+            {% endif %}
+            <dt>{{ 'Nazwa trasy'|trans }}</dt>
+            <dd>{{  wpis.trasa.name }}</dd>
+            <dt>{{ 'Region'}}</dt>
+            <dd>{{  wpis.trasa.region.name }}</dd>
+            <dt>{{ 'Poziom trudności'}}</dt>
+            <dd>{{  wpis.trasa.trudnosc.name }}</dd>
+            <dt>{{ 'Punkt startowy'|trans }}</dt>
+            <dd>{{  wpis.trasa.punktStartowy }}</dd>
+            <dt>{{ 'Punkt konocwy'|trans }}</dt>
+            <dd>{{  wpis.trasa.punktKoncowy }}</dd>
+            <dt>{{ 'Czas przejscia'|trans }}</dt>
+            <dd>{{  wpis.trasa.czas|date('H:i') }}</dd>
+            <dt>{{ 'Punkty'|trans }}</dt>
+            <dd>{{  wpis.trasa.points }}</dd>
+        </dl>
+
+    {% else %}
+        <p>
+            {{ 'message_item_not_found'|trans }}
+        </p>
+    {% endif %}
+    <p class="button">
+        <a href="{{ url('wpis_index') }}" title="{{ 'action_back_to_list'|trans }}">
+            {{ 'action_back_to_list'|trans }}
+        </a>
+    </p>
+    </div>
+{% endblock %}

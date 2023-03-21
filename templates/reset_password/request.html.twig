@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title_reset_pass'|trans }}{% endblock %}
+
+{% block body %}
+<div class="srodek">
+    {% for flashError in app.flashes('reset_password_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+    <h1>{{ 'title_reset_pass'|trans }}</h1>
+
+    {{ form_start(requestForm) }}
+        {{ form_row(requestForm.email) }}
+        <div>
+            <small>
+                {{ 'enter_email_reset'|trans }}
+
+            </small>
+        </div>
+
+        <button class="btn btn-primary">{{ 'send_email_reset'|trans }}</button>
+    {{ form_end(requestForm) }}
+</div>
+{% endblock %}

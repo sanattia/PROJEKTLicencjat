@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title_reset_pass'|trans }}{% endblock %}
+
+{% block body %}
+<div class="srodek">
+    <h1>{{ 'title_reset_pass'|trans }}</h1>
+
+    {{ form_start(resetForm) }}
+        {{ form_row(resetForm.plainPassword) }}
+        <button class="btn btn-primary">{{ 'title_reset_pass'|trans }}</button>
+    {{ form_end(resetForm) }}
+</div>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Książeczka' }}
+{% endblock %}
+
+{% block body %}
+
+    <style>
+        .container-fluid{
+            padding-left:0px;
+            padding-right: 0px;
+        }
+
+        label{
+            display:none;
+        }
+
+
+        #banner{
+            padding-left:2em;
+            padding-right: 2em;
+        }
+    </style>
+
+
+
+        <div id="banner" class="bg-img">
+            <div class="srodekGlowna">
+            <div class="opis_strony">
+            <h1 class="homeHeader">Książeczka Turystyczna</h1>
+            <h2 class="homeHeaderSmall">Gdzie chcesz się dzisiaj wybrać?</h2>
+            <p>Przegladaj listę tras i dodawaj je do swojej książeczki. Nie masz pomysłu? Wybierz region, poziom trudności i interesujące miejsce aby zobaczyć pasujące trasy.</p>
+            </div>
+
+
+
+                <div class="picker, pickerMain">
+                {{ form_start(picker, { method: 'POST', action: url('trasa_index') }) }}
+                {{ form_widget(picker) }}
+                <div class="butonek">
+                    <input type="submit" value="Sprawdź trasy" class="btn btn-primary butonekMalyDwa" />
+                </div>
+                {{ form_end(picker) }}
+                </div>
+
+            <a href="#kategorie"><img src="{{ asset( 'img/down.png') }}" alt="strzałka w dół" class="arrowDown"></a>
+            </div>
+        </div>
+    <div id="data" style="position: relative">
+<div id="kategorie"></div>
+        <div id="panels" class="panelsBoom">
+            <div id="wrapper">
+                <div id="inner">
+                    <div class="image-wrapper">
+                        <p>
+                            <a href="{{ url('region_index' )}}" title="{{ 'action_view'|trans }} Regiony">
+                            <img src="{{ asset( 'img/1.png') }}" alt="Regiony">
+                            </a>
+                        </p>
+                        <p class="caption">Regiony</p>
+                    </div>
+                    <div class="image-wrapper">
+                        <p>
+                            <a href="{{ url('trudnosc_index' )}}" title="{{ 'action_view'|trans }} Trudności">
+                            <img src="{{ asset( 'img/2.png') }}" alt="Trudności">
+                            </a>
+                        </p>
+                        <p class="caption">Trudnośći</p>
+                    </div>
+                    <div class="image-wrapper">
+                        <p>
+                            <a href="{{ url('tag_index' )}}" title="{{ 'action_view'|trans }} Tagi">
+                            <img src="{{ asset( 'img/3.png') }}" alt="Interesujące Miejsca">
+                            </a>
+                        </p>
+                        <p class="caption">Interesujące miejsca</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    {% if is_granted('ROLE_ADMIN') %}
+    {% endif %}
+    {% if is_granted('ROLE_USER') %}
+    {% endif %}
+{% endblock %}
